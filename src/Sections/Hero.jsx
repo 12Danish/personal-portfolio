@@ -1,13 +1,13 @@
 import { heroPhrases } from "../constants";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
-import HackerRoom from "../Components/HackerRoom";
-import CanvasLoader from "../Components/CanvasLoader";
+import HackerRoom from "../Components/Hero/HackerRoom.jsx";
+import CanvasLoader from "../Components/Hero/CanvasLoader.jsx";
 import { Suspense, useMemo, useState, useEffect } from "react";
-import HeroCamera from "../Components/HeroCamera.jsx";
+import HeroCamera from "../Components/Hero/HeroCamera.jsx";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants/index.js";
-import TypingAnimation from "../Components/TypingSection.jsx";
+import TypingAnimation from "../Components/Hero/TypingSection.jsx";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(true);

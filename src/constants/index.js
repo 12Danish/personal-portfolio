@@ -7,9 +7,86 @@ export const heroPhrases = [
 ];
 
 export const MyDetails = [
-  " I am a BSCS student at the National University of Science and Technology at the School of Electrical Engineering and Computer Sciences, Islamabad.",
-  "  I am a passionate learner and an adept software developer using AI Tools to craft modern applications. I possess hands-on industry experience and am always open to new opportunities!",
+  "I am a BSCS student at the National University of Sciences and Technology (NUST), School of Electrical Engineering and Computer Sciences, Islamabad.",
+  "I am a passionate learner and skilled software developer, leveraging AI tools to build modern applications. With hands-on industry experience, I am always eager to embrace new opportunities and challenges!",
 ];
+
+export const workExperience = {
+  company: "Onescreen Research Lab",
+  location: "NUST Islamabad, Associated with Onescreen San Diego, CA",
+  duration: "June 2024 - Present",
+  position: "Part-time Software Developer",
+  projects: [
+    {
+      id: 1,
+      title: "builder.lessn.ai",
+      url: "https://builder.lessn.ai/",
+      description:
+        "AI-powered presentation maker specifically targeting US instructors",
+      role: "Full Stack Developer",
+      responsibilities: [
+        "Complete frontend and backend development",
+        "Deployment and maintenance",
+        "Research about instructor needs",
+        "End-to-end product development",
+      ],
+      technologies: [
+        "Python (Flask)",
+        "React",
+        "MySQL",
+        "Transformers",
+        "AI/ML",
+      ],
+      highlight: "Complete product ownership from research to deployment",
+      icon: "🎯",
+      color: "blue",
+    },
+    {
+      id: 2,
+      title: "suprnotes.ai",
+      url: "https://suprnotes.ai/",
+      description: "AI-powered tool that generates notes from video lectures",
+      role: "AI Research Developer",
+      responsibilities: [
+        "Solved slide segmentation for downstream processing",
+        "Tested different CNNs (SAM, YOLO, etc.)",
+        "Handled dataset curation for fine-tuning",
+        "Trained and compared models graphically",
+        "Deployed production-ready model",
+      ],
+      technologies: [
+        "Computer Vision",
+        "CNNs",
+        "SAM",
+        "YOLO",
+        "Dataset Curation",
+        "Model Training",
+      ],
+      highlight: "Fine-tuned model currently in production use",
+      icon: "🧠",
+      color: "purple",
+    },
+  ],
+};
+
+export const getProjectColors = (color) => {
+  const colors = {
+    blue: {
+      bg: "from-blue-600/20 to-cyan-600/20",
+      border: "border-blue-500/30",
+      text: "text-blue-300",
+      accent: "bg-blue-500",
+    },
+    purple: {
+      bg: "from-purple-600/20 to-pink-600/20",
+      border: "border-purple-500/30",
+      text: "text-purple-300",
+      accent: "bg-purple-500",
+    },
+  };
+  return colors[color];
+};
+
 export const navLinks = [
   {
     id: 1,

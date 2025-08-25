@@ -5,9 +5,9 @@ const About = () => {
   return (
     <section className="c-space h-screen flex items-center justify-center">
       <div className="w-full max-w-6xl mx-auto">
-        <p className="sm:text-3xl text-2xl text-white font-semibold font-generalsans mb-8 text-center">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white font-semibold font-generalsans text-center mb-4">
           About Me
-        </p>
+        </h2>
 
         <div className="bg-black-600/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-gray-700/50 shadow-2xl">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
