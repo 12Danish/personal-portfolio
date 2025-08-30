@@ -146,7 +146,7 @@ const Projects = () => {
   const colors = getProjectColors(currentProjectData.color);
 
   return (
-    <section className="c-space min-h-screen flex items-center justify-center py-16">
+    <section  className="c-space min-h-screen flex items-center justify-center py-16">
       <div className="w-full max-w-7xl mx-auto">
         <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           

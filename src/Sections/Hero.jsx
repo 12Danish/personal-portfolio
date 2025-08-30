@@ -11,7 +11,7 @@ import TypingAnimation from "../Components/Hero/TypingSection.jsx";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(true);
-  
+
   // Use media queries to determine screen size
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
@@ -30,11 +30,11 @@ const Hero = () => {
       },
       {
         threshold: 0.1, // Trigger when 10% visible
-        rootMargin: '50px' // Start loading slightly before coming into view
+        rootMargin: "50px", // Start loading slightly before coming into view
       }
     );
 
-    const heroSection = document.getElementById('hero-section');
+    const heroSection = document.getElementById("hero-section");
     if (heroSection) {
       observer.observe(heroSection);
     }
@@ -47,10 +47,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section 
-      id="hero-section"
-      className="flex flex-col w-full h-screen overflow-hidden relative"
-    >
+    <section className="flex flex-col w-full h-screen overflow-hidden relative">
       <div className="w-full mx-auto flex flex-col sm:mt-26 mt-20 c-space gap-3  ">
         <p className="sm:text-3xl text-2xl text-white text-center font-bold font-generalsans">
           Hi I am Danish
@@ -70,20 +67,20 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      
+
       <div className="w-full h-full inset-0 absolute">
         {isVisible && (
-          <Canvas 
+          <Canvas
             className="w-full h-full"
-            gl={{ 
+            gl={{
               antialias: false, // Better performance
               alpha: true,
-              powerPreference: "high-performance"
+              powerPreference: "high-performance",
             }}
             dpr={[1, Math.min(window.devicePixelRatio, 2)]} // Limit pixel ratio
-            frameloop={isVisible ? 'always' : 'never'} // Stop rendering when not visible
+            frameloop={isVisible ? "always" : "never"} // Stop rendering when not visible
           >
-            <Suspense fallback={<CanvasLoader/>}>
+            <Suspense fallback={<CanvasLoader />}>
               <PerspectiveCamera makeDefault position={[0, 0, 30]} />
 
               <HeroCamera isMobile={isMobile} isVisible={isVisible}>
