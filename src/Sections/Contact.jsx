@@ -88,7 +88,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="c-space min-h-screen py-16">
+    <section id="contact" className="c-space min-h-screen py-16">
       <div className="w-full max-w-7xl mx-auto">
         <div
           className={`transform transition-all duration-1000 ${

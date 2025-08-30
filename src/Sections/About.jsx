@@ -3,7 +3,7 @@ import { MyDetails } from "../constants";
 
 const About = () => {
   return (
-    <section  className="c-space h-screen flex items-center justify-center">
+    <section  id="about" className="c-space h-screen flex items-center justify-center">
       <div className="w-full max-w-6xl mx-auto">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white font-semibold font-generalsans text-center mb-4">
           About Me

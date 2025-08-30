@@ -17,7 +17,7 @@ const Work = () => {
   }, []);
 
   return (
-    <section className="c-space min-h-screen flex items-center justify-center ">
+    <section id="work" className="c-space min-h-screen flex items-center justify-center ">
       <div className="w-full max-w-7xl mx-auto">
         <div
           className={`transform transition-all duration-1000 ${

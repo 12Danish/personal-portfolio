@@ -1,4 +1,5 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
+
 const TypingAnimation = ({
   phrases,
   typingSpeed = 50,
@@ -11,55 +12,95 @@ const TypingAnimation = ({
   const [currentText, setCurrentText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
   const [charIndex, setCharIndex] = useState(0);
+  
+  // Use refs to avoid recreating timeouts and improve performance
+  const timeoutRef = useRef(null);
+  const animationFrameRef = useRef(null);
+  const lastUpdateTime = useRef(0);
 
+  // Memoize current phrase to avoid recalculation
+  const currentPhrase = phrases?.[currentPhraseIndex] || "";
+
+  // Optimized animation function using requestAnimationFrame for better performance
+  const animate = useCallback((timestamp) => {
+    const elapsed = timestamp - lastUpdateTime.current;
+    const currentSpeed = isTyping ? typingSpeed : deletingSpeed;
+
+    if (elapsed >= currentSpeed) {
+      lastUpdateTime.current = timestamp;
+
+      if (isTyping) {
+        // Typing phase
+        if (charIndex < currentPhrase.length) {
+          setCurrentText(currentPhrase.substring(0, charIndex + 1));
+          setCharIndex(prev => prev + 1);
+        } else {
+          // Finished typing, pause before deleting
+          setIsTyping(false);
+          lastUpdateTime.current = timestamp + pauseDuration; // Add pause delay
+        }
+      } else {
+        // Deleting phase
+        if (charIndex > 0) {
+          setCurrentText(currentPhrase.substring(0, charIndex - 1));
+          setCharIndex(prev => prev - 1);
+        } else {
+          // Finished deleting, move to next phrase
+          setCurrentPhraseIndex(prev => (prev + 1) % phrases.length);
+          setIsTyping(true);
+        }
+      }
+    }
+
+    // Continue animation loop
+    animationFrameRef.current = requestAnimationFrame(animate);
+  }, [charIndex, isTyping, currentPhrase, typingSpeed, deletingSpeed, pauseDuration, phrases.length]);
+
+  // Start animation loop
   useEffect(() => {
     if (!phrases || phrases.length === 0) return;
 
-    const currentPhrase = phrases[currentPhraseIndex];
+    // Initialize animation
+    lastUpdateTime.current = performance.now();
+    animationFrameRef.current = requestAnimationFrame(animate);
 
-    if (isTyping) {
-      // Typing phase
-      if (charIndex < currentPhrase.length) {
-        const timeout = setTimeout(() => {
-          setCurrentText(currentPhrase.substring(0, charIndex + 1));
-          setCharIndex(charIndex + 1);
-        }, typingSpeed);
-        return () => clearTimeout(timeout);
-      } else {
-        // Finished typing, pause before deleting
-        const timeout = setTimeout(() => {
-          setIsTyping(false);
-        }, pauseDuration);
-        return () => clearTimeout(timeout);
+    return () => {
+      // Cleanup animation frame
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
       }
-    } else {
-      // Deleting phase
-      if (charIndex > 0) {
-        const timeout = setTimeout(() => {
-          setCurrentText(currentPhrase.substring(0, charIndex - 1));
-          setCharIndex(charIndex - 1);
-        }, deletingSpeed);
-        return () => clearTimeout(timeout);
-      } else {
-        // Finished deleting, move to next phrase
-        setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-        setIsTyping(true);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
       }
-    }
-  }, [
-    charIndex,
-    isTyping,
-    currentPhraseIndex,
-    phrases,
-    typingSpeed,
-    deletingSpeed,
-    pauseDuration,
-  ]);
+    };
+  }, [animate]);
+
+  // Reset when phrases change
+  useEffect(() => {
+    setCurrentPhraseIndex(0);
+    setCurrentText("");
+    setIsTyping(true);
+    setCharIndex(0);
+  }, [phrases]);
+
+  // Memoized cursor to prevent unnecessary re-renders
+  const cursor = (
+    <span 
+      className={`animate-pulse ${cursorClassName}`}
+      style={{
+        // Optimize cursor animation
+        animationDuration: '1s',
+        animationTimingFunction: 'ease-in-out',
+      }}
+    >
+      |
+    </span>
+  );
 
   return (
     <span className={className}>
       {currentText}
-      <span className={`animate-pulse ${cursorClassName}`}>|</span>
+      {cursor}
     </span>
   );
 };

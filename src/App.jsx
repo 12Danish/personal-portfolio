@@ -10,7 +10,7 @@ import Contact from "./Sections/Contact";
 function App() {
   return (
     <main className="max-w-7xl mx-auto">
-      <Stars />
+      
       <Navbar />
       <Hero />
       <About />
