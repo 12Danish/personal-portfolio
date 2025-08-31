@@ -59,7 +59,7 @@ const SocialLinkCard = ({ social, index, isVisible }) => {
           {social.name}
         </span>
 
-        <span className="text-gray-400 text-xs font-generalsans text-center">
+        <span className="text-gray-400 text-xs font-generalsans text-center leading-relaxed break-all">
           {social.description}
         </span>
       </div>

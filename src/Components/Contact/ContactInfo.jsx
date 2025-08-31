@@ -15,7 +15,7 @@ const ContactInfo = () => {
 
       <div className="space-y-4">
         <ContactInfoItem icon={FaMapMarkerAlt} text="Islamabad, Pakistan" />
-        <ContactInfoItem icon={FaEnvelope} text="Email Me" />
+        <ContactInfoItem icon={FaEnvelope} text="danishabbas2004@gmail.com" />
       </div>
     </div>
   );
