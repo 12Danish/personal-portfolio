@@ -104,7 +104,7 @@ export const projectsData = [
     title: "Portfolio Website",
     description:
       "A modern, responsive portfolio website built with React and Three.js, featuring dynamic animations and interactive 3D elements.",
-    image: "src/assets/portfolio.png", // Replace with actual image path
+    image: "images/portfolio.png", // Replace with actual image path
     technologies: ["React", "Three.js", "Tailwind CSS", "JavaScript"],
     githubLink: "https://github.com/12Danish/personal-portfolio",
     liveLink: "https://danishabbas.site",
@@ -117,7 +117,7 @@ export const projectsData = [
     title: "NextRep",
     description:
       "AI powered fitness app with scheduling, tracking, stats monitoring, nearby gyms feature and acustom Ai assistant for guidance. authentication",
-    image: "/src/assets/nextRep.png", // Replace with actual image path
+    image: "images/nextRep.png", // Replace with actual image path
     technologies: [
       "React",
       "Node",
@@ -138,7 +138,7 @@ export const projectsData = [
     title: "Custom Git",
     description:
       "Solved the CodeCrafter's custom git challenge by implementing core Git functionality, including initializing a repository, handling objects, listing trees, writing trees, creating commits, and cloning repositories",
-    image: "src/assets/git.png", // Replace with actual image path
+    image: "images/git.png", // Replace with actual image path
     technologies: ["Rust"],
     githubLink: "https://github.com/12Danish/custom_git",
     liveLink: null,
@@ -151,7 +151,7 @@ export const projectsData = [
     title: "Enigma",
     description:
       "A maze solver that uses BFS and, when a maze appears unsolvable, intelligently rotates the grid by selected angles and attempts multiple orientations to uncover a path. It then chooses the most optimal solution and visualizes the discovered route with smooth, graphical animations.",
-    image: "src/assets/Engima.png", // Replace with actual image path
+    image: "images/Engima.png", // Replace with actual image path
     technologies: ["Java"],
     githubLink: "https://github.com/yourusername/chat-app",
     liveLink: null,
