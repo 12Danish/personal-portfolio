@@ -1,4 +1,5 @@
-
+import React from 'react';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const ProjectCard = ({ project, colors, isActive }) => {
   return (
@@ -22,8 +23,11 @@ const ProjectCard = ({ project, colors, isActive }) => {
                 {project.icon}
               </div>
               <div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-white font-generalsans mb-2 hover:text-blue-500 underline">
-                  <a href={project.url}>{project.title}</a>
+                <h3 className="text-2xl lg:text-3xl font-bold text-white font-generalsans mb-2 hover:text-blue-500 underline flex items-center gap-3">
+                  <a href={project.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
+                    {project.title}
+                    <FaExternalLinkAlt className="text-lg opacity-70 hover:opacity-100 transition-opacity duration-200" />
+                  </a>
                 </h3>
                 <p
                   className={`${colors.text} font-semibold font-generalsans mb-3`}

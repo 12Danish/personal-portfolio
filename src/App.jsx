@@ -9,8 +9,8 @@ import Technologies from "./Sections/Technologies";
 import Contact from "./Sections/Contact";
 function App() {
   return (
-    <main className="max-w-7xl mx-auto">
-      
+    <main className="max-w-7xl mx-auto space-y-20">
+      <Stars/>
       <Navbar />
       <Hero />
       <About />

@@ -16,7 +16,7 @@ const About = () => {
               <div className="relative">
                 <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-600/20 border-2 border-gray-600/50 overflow-hidden shadow-lg">
                   <img
-                    src="public/assets/pfp.jpg"
+                    src="src/assets/pfp.jpg"
                     alt="Danish - Software Developer"
                     className="w-full h-full object-cover"
                   />

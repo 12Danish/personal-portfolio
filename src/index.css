@@ -30,8 +30,15 @@ body {
   position: absolute;
   background: linear-gradient(45deg, #ffffff, #e6f3ff);
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  animation: fall linear infinite;
+  animation: fall linear infinite, glow 2s ease-in-out infinite alternate;
   opacity: 0;
+  /* NEW: Enhanced glow effects */
+  box-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6),
+    0 0 30px rgba(255, 255, 255, 0.4),
+    0 0 40px rgba(135, 206, 250, 0.3);
+  filter: blur(0.5px);
 }
 
 .star:nth-child(1) {

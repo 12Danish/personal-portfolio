@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { workExperience, getProjectColors } from "../constants";
+import { workExperience, getWorkProjectColors } from "../constants";
 import WorkHeader from "../Components/Work/WorkHeader";
 import ProjectCard from "../Components/Work/ProjectCard";
 import ProjectNavigation from "../Components/Work/ProjectNavigation";
@@ -17,7 +17,7 @@ const Work = () => {
   }, []);
 
   return (
-    <section id="work" className="c-space min-h-screen flex items-center justify-center ">
+    <section id="work" className="c-space min-h-screen flex items-center justify-center  ">
       <div className="w-full max-w-7xl mx-auto">
         <div
           className={`transform transition-all duration-1000 ${
@@ -40,7 +40,7 @@ const Work = () => {
           {/* Active Project Display */}
           <div className="relative">
             {workExperience.projects.map((project, index) => {
-              const colors = getProjectColors(project.color);
+              const colors = getWorkProjectColors(project.color);
               return (
                 <ProjectCard
                   key={project.id}
