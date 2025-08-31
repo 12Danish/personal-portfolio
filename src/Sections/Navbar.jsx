@@ -33,7 +33,7 @@ const Navbar = () => {
             Danish
           </a>
 
-          <div className="sm:hidden">
+          <div className="md:hidden">
             {isMenuSelected ? (
               <ImCross
                 className="w-4 h-4 text-neutral-400 hover:text-white  focus:outline-none cursor-pointer"
@@ -49,14 +49,14 @@ const Navbar = () => {
             )}
           </div>
 
-          <nav className="hidden sm:block">
+          <nav className="hidden md:block">
             <NavItems />
           </nav>
           
         
         </div>
           <div
-            className={`nav-sidebar ${
+            className={`nav-sidebar  ${
               isMenuSelected ? "max-h-screen" : "max-h-0"
             }`}
           >
