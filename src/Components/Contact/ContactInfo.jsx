@@ -25,7 +25,7 @@ const ContactInfoItem = ({ icon: Icon, text }) => {
   return (
     <div className="flex items-center gap-4 text-gray-300">
       <Icon className="text-green-400 text-lg" />
-      <span className="font-generalsans break-words overflow-hidden">
+      <span className="font-generalsans break-words overflow-hidden break-words whitespace-normal">
         {text}
       </span>
     </div>
