@@ -9,7 +9,7 @@ import Technologies from "./Sections/Technologies";
 import Contact from "./Sections/Contact";
 function App() {
   return (
-    <main className="max-w-7xl mx-auto space-y-20">
+    <main className="max-w-7xl mx-auto space-y-20 overflow-x-hidden">
       <Starfield
         starCount={1000}
         starColor={[255, 255, 255]}
