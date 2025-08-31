@@ -8,7 +8,7 @@ import CanvasLoader from "../Components/Hero/Loading.jsx";
 import HeroCamera from "../Components/Hero/HeroCamera.jsx";
 import { calculateSizes } from "../constants/index.js";
 import { HackerRoom } from "../Components/Hero/HackerRoom.jsx";
-import TypingAnimation from "../Components/Hero/TypingSection.jsx";
+
 const Hero = () => {
   // Use media queries to determine screen size
   const isSmall = useMediaQuery({ maxWidth: 440 });
