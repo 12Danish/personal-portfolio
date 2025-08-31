@@ -14,12 +14,8 @@ const ContactInfo = () => {
       </div>
 
       <div className="space-y-4">
-        <ContactInfoItem
-          icon={FaMapMarkerAlt}
-          text="Islamabad, Pakistan"
-        />
+        <ContactInfoItem icon={FaMapMarkerAlt} text="Islamabad, Pakistan" />
         <ContactInfoItem icon={FaEnvelope} text="danishabbas2004@gmail.com" />
-     
       </div>
     </div>
   );
@@ -29,7 +25,9 @@ const ContactInfoItem = ({ icon: Icon, text }) => {
   return (
     <div className="flex items-center gap-4 text-gray-300">
       <Icon className="text-green-400 text-lg" />
-      <span className="font-generalsans">{text}</span>
+      <span className="font-generalsans break-words overflow-hidden">
+        {text}
+      </span>
     </div>
   );
 };
