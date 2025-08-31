@@ -360,7 +360,7 @@ export const navLinks = [
   {
     id: 1,
     name: "Home",
-    href: "#hero-section",
+    href: "#home",
   },
   {
     id: 2,

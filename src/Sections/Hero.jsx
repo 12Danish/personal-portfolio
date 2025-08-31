@@ -5,10 +5,10 @@ import FloatingCodeBlocks from "../Components/Hero/FloatingCode";
 // Main Hero Component
 const Hero = () => {
   return (
-    <>
-      <style jsx>{``}</style>
+    
+     
 
-      <section
+      <section 
         className="min-h-screen w-full flex flex-col relative overflow-hidden px-4 sm:px-6"
         id="home"
       >
@@ -67,7 +67,7 @@ const Hero = () => {
           style={{ animationDelay: "1s" }}
         ></div>
       </section>
-    </>
+    
   );
 };
 
