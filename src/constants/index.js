@@ -26,14 +26,6 @@ import {
   SiExpress,
 } from "react-icons/si";
 
-export const heroPhrases = [
-  "A Software Engineer and Full-Stack Developer.",
-  "Passionate about building modern, scalable applications.",
-  "Focused on crafting seamless user experiences.",
-  "Exploring possibilities with AI & Machine Learning.",
-  "Dedicated to engineering technology that makes an impact.",
-];
-
 export const MyDetails = [
   "I am a BSCS student at the National University of Sciences and Technology (NUST), School of Electrical Engineering and Computer Sciences, Islamabad.",
   "I am a passionate learner and skilled software developer, leveraging AI tools to build modern applications. With hands-on industry experience, I am always eager to embrace new opportunities and challenges!",
@@ -99,19 +91,7 @@ export const workExperience = {
 
 // Sample projects data - replace with your actual projects
 export const projectsData = [
-  {
-    id: 1,
-    title: "Portfolio Website",
-    description:
-      "A modern, responsive portfolio website built with React and Three.js, featuring dynamic animations and interactive 3D elements.",
-    image: "images/portfolio.png", // Replace with actual image path
-    technologies: ["React", "Three.js", "Tailwind CSS", "JavaScript"],
-    githubLink: "https://github.com/12Danish/personal-portfolio",
-    liveLink: "https://danishabbas.site",
-    category: "Web Development",
-    featured: true,
-    color: "blue",
-  },
+  
   {
     id: 2,
     title: "NextRep",
@@ -143,7 +123,7 @@ export const projectsData = [
     githubLink: "https://github.com/12Danish/custom_git",
     liveLink: null,
     category: "Low Level Software Development",
-    featured: true ,
+    featured: true,
     color: "red",
   },
   {
@@ -159,6 +139,19 @@ export const projectsData = [
     featured: true,
     color: "purple",
   },
+  {
+    id: 1,
+    title: "Portfolio Website",
+    description:
+      "A modern, responsive portfolio website built with React, featuring modern and user oriented design.",
+    image: "images/portfolio.png", // Replace with actual image path
+    technologies: ["React",  "Tailwind CSS", "JavaScript"],
+    githubLink: "https://github.com/12Danish/personal-portfolio",
+    liveLink: "https://danishabbas.site",
+    category: "Web Development",
+    featured: true,
+    color: "blue",
+  }
 ];
 
 export const getWorkProjectColors = (color) => {
@@ -435,3 +428,19 @@ export const socialLinks = [
     isDownload: true,
   },
 ];
+
+export const terminalPhrases = [
+  "Passionate about building modern, scalable applications.",
+  "Focused on crafting seamless user experiences.",
+  "Exploring possibilities with AI & Machine Learning.",
+  "Dedicated to engineering technology that makes an impact.",
+];
+
+export   const codeSnippets = [
+    "const developer = 'Danish';",
+    "function createAwesome() {",
+    "return results;",
+    "} // end code",
+    "npm install creativity",
+    "git commit -m 'prod-ready'",
+  ];
