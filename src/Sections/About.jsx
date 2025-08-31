@@ -1,9 +1,13 @@
 import React from "react";
 import { MyDetails } from "../constants";
+import { pfp } from "src/assets/pfp.png";
 
 const About = () => {
   return (
-    <section  id="about" className="c-space h-screen flex items-center justify-center">
+    <section
+      id="about"
+      className="c-space h-screen flex items-center justify-center"
+    >
       <div className="w-full max-w-6xl mx-auto">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white font-semibold font-generalsans text-center mb-4">
           About Me
@@ -16,7 +20,7 @@ const About = () => {
               <div className="relative">
                 <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-600/20 border-2 border-gray-600/50 overflow-hidden shadow-lg">
                   <img
-                    src="src/assets/pfp.jpg"
+                    src={pfp}
                     alt="Danish - Software Developer"
                     className="w-full h-full object-cover"
                   />
