@@ -1,28 +1,9 @@
-const Stars = () => {
+const Stars = ({ count = 40 }) => {
   return (
     <div className="falling-stars">
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-
-      
+      {Array.from({ length: count }).map((_, i) => (
+        <div key={i} className="star"></div>
+      ))}
     </div>
   );
 };

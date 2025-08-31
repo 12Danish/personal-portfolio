@@ -7,7 +7,7 @@ import { socialLinks } from "../constants";
 import {
   useContactForm,
   useVisibility,
-} from "../Components/Contact/CustomHookes";
+} from "../Components/Contact/CustomHooks";
 
 const Contact = () => {
   const isVisible = useVisibility(300);
