@@ -1,7 +1,7 @@
 import "./App.css";
 import Navbar from "./Sections/Navbar";
 import Hero from "./Sections/Hero";
-import Stars from "./Components/Stars";
+import Starfield from "react-starfield";
 import About from "./Sections/About";
 import Work from "./Sections/Work";
 import Projects from "./Sections/Projects";
@@ -10,7 +10,12 @@ import Contact from "./Sections/Contact";
 function App() {
   return (
     <main className="max-w-7xl mx-auto space-y-20">
-      <Stars/>
+      <Starfield
+        starCount={1000}
+        starColor={[255, 255, 255]}
+        speedFactor={0.05}
+        backgroundColor="black"
+      />
       <Navbar />
       <Hero />
       <About />
