@@ -102,7 +102,7 @@ export const projectsData = [
       "React",
       "Python",
       "Flask",
-      "Skcit-learn",
+      "Scikit-learn",
       "Google Api",
     
     ],
@@ -444,7 +444,7 @@ export const socialLinks = [
   {
     name: "Download CV",
     icon: FaDownload,
-    url: "/danish-cv-companies.pdf", // Replace with your CV path
+    url: "danish-cv-companies.pdf", // Replace with your CV path
     color: "#4CAF50",
     description: "Download my resume",
     isDownload: true,
