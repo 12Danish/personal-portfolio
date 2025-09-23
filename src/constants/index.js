@@ -93,6 +93,26 @@ export const workExperience = {
 export const projectsData = [
   
   {
+    id: 5,
+    title: "EduPredict",
+    description:
+      "An AI/ML-powered application that identifies students at risk of dropping out and provides personalized suggestions to support them.",
+    image: "images/eduPredict.png", // Replace with actual image path
+    technologies: [
+      "React",
+      "Python",
+      "Flask",
+      "Skcit-learn",
+      "Google Api",
+    
+    ],
+    backendLink: "https://github.com/12Danish/EduPredictBackend",
+    frontendLink: "https://github.com/12Danish/EduPredictFrontend",
+    liveLink: "https://www.edupredict.online/",
+    category: "ML",
+    featured: true,
+    color: "blue",
+  },{
     id: 2,
     title: "NextRep",
     description:
@@ -151,7 +171,9 @@ export const projectsData = [
     category: "Web Development",
     featured: true,
     color: "blue",
-  }
+  },
+
+ 
 ];
 
 export const getWorkProjectColors = (color) => {
@@ -422,7 +444,7 @@ export const socialLinks = [
   {
     name: "Download CV",
     icon: FaDownload,
-    url: "/path-to-your-cv.pdf", // Replace with your CV path
+    url: "/danish-cv-companies.pdf", // Replace with your CV path
     color: "#4CAF50",
     description: "Download my resume",
     isDownload: true,
